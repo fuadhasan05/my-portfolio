@@ -11,7 +11,7 @@ export default function Navbar() {
     { label: "Home", target: "home" },
     { label: "About", target: "about" },
     { label: "Projects", target: "projects" },
-    { label: "Blog", target: "blog" },
+    // { label: "Blog", target: "blog" },
   ];
 
   // Scroll handler
