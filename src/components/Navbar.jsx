@@ -8,8 +8,8 @@ export default function Navbar() {
   const navItems = ["Home", "Service", "Projects", "Blog"];
 
   return (
-    <nav className="bg-gradient-to-tr from-purple-800/20 to-pink-500/10 text-white py-3 px-6 md:px-16 shadow-md fixed top-0 left-0 right-0 z-50">
-      <div className="flex items-center justify-between max-w-7xl mx-auto">
+    <nav className="bg-[#0f0f1a] text-white py-3 px-6 md:px-16 shadow-md fixed top-0 left-0 right-0 z-50">
+      <div className="flex items-center justify-between container mx-auto px-4">
         {/* Left: Logo */}
         <div className="text-3xl font-signature tracking-wide flex-1">
           Fuad Hasan
