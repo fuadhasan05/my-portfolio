@@ -45,7 +45,7 @@ export default function FeaturedProjects() {
   ];
 
   return (
-    <div className="text-white py-16 px-4">
+    <div id="projects" className="text-white py-16 px-4">
       {/* Heading */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
