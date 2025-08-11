@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaTelegramPlane } from "react-icons/fa";
+import { FaCloudDownloadAlt, FaTelegramPlane } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
 import { VscCallOutgoing } from "react-icons/vsc";
 
@@ -62,11 +62,14 @@ export default function Navbar() {
 
           {/* Right: Button */}
           <div className="hidden md:flex flex-1 justify-end">
-            <button className="bg-slate-800 px-3 py-2 rounded-lg text-white font-medium shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2">
-              ctrl+k
-            </button>
+            <a
+              href="/resume.pdf"
+              download="Fuad_Hasan_Resume.pdf"
+              className="bg-slate-800 px-3 py-2 rounded-lg text-white font-medium shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+            >
+              Resume <FaCloudDownloadAlt />
+            </a>
           </div>
-
           {/* Mobile Menu Icon */}
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>

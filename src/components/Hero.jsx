@@ -38,9 +38,13 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex justify-center mt-10">
-          <button className="bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-1 rounded-full text-white font-medium flex items-center gap-2 justify-center cursor-pointer">
+          <a
+            href="/resume.pdf"
+            download="Fuad_Hasan_Resume.pdf"
+            className="bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-1 rounded-full text-white font-medium flex items-center gap-2 justify-center cursor-pointer"
+          >
             Resume <FaCloudDownloadAlt />
-          </button>
+          </a>
         </div>
       </div>
     </section>
