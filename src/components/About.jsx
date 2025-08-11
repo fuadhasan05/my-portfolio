@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div id="about" className="container mx-auto text-white py-16 px-4">
+    <div id="about" className="container mx-auto text-white py-16">
       {/* Heading */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-6">About Me</h2>

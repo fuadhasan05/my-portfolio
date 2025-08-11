@@ -29,11 +29,11 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-[#0f0f1a] text-white py-3 px-6 md:px-16 shadow-md fixed top-0 left-0 right-0 z-50">
-        <div className="flex items-center justify-between container mx-auto px-4">
+      <nav className="bg-[#0f0f1a] text-white py-3 md:px-16 shadow-md fixed top-0 left-0 right-0 z-50">
+        <div className="flex items-center justify-between container mx-auto">
           {/* Left: Logo */}
           <div
-            className="text-3xl font-signature tracking-wide flex-1 cursor-pointer"
+            className="text-4xl flex-1 font-signature cursor-pointer select-none inline-block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500"
             onClick={() => handleScroll("home")}
           >
             Fuad Hasan
@@ -113,7 +113,9 @@ export default function Navbar() {
             >
               ✕
             </button>
-            <h2 className="text-xl font-bold mb-4 text-center">Send Me a Massege</h2>
+            <h2 className="text-xl font-bold mb-4 text-center">
+              Send Me a Massege
+            </h2>
             <form className="flex-1 max-w-lg p-6 rounded-lg border bg-gray-900 border-gray-400/40 shadow-lg flex flex-col gap-4">
               <input
                 type="text"

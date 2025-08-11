@@ -45,7 +45,7 @@ export default function FeaturedProjects() {
   ];
 
   return (
-    <div id="projects" className="text-white py-16 px-4">
+    <div id="projects" className="text-white py-16">
       {/* Heading */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
@@ -53,7 +53,7 @@ export default function FeaturedProjects() {
       </div>
 
       {/* Project Cards */}
-      <div className="grid md:grid-cols-3 gap-8 container mx-auto px-4">
+      <div className="grid md:grid-cols-3 gap-8 container mx-auto">
         {projects.map((project, idx) => (
           <div
             key={idx}

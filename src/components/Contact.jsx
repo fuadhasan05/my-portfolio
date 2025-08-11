@@ -11,7 +11,7 @@ import {
 
 export default function Contact() {
   return (
-    <section className="container mx-auto flex flex-col md:flex-row gap-10 px-4 py-16 text-gray-100 min-h-[400px]">
+    <section className="container mx-auto flex flex-col md:flex-row gap-10 py-16 text-gray-100 min-h-[400px]">
       {/* Left side: Contact info */}
       <div className="flex-1 space-y-6">
         <h2 className="text-4xl font-bold text-pink-500">
