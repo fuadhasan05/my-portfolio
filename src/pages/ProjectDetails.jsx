@@ -1,11 +1,16 @@
-import React from 'react';
+import { useLoaderData, useParams } from "react-router";
 
-const ProjectDetails = () => {
-    return (
-        <div>
-            thsi is project details page
-        </div>
-    );
-};
+export default function ProjectDetails() {
+  const { id } = useParams();
+  const projects = useLoaderData();
+  const project = projects.find(p => p.id === parseInt(id));
 
-export default ProjectDetails;
+  if (!project) return <p>Project not found</p>;
+
+  return (
+    <div className="text-white p-6">
+      <h1 className="text-3xl font-bold">{project.title}</h1>
+      <p>{project.description}</p>
+    </div>
+  );
+}

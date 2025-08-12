@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Aptora - Building Management System",
+    "description": "Aptora is a modern web application for managing apartment buildings, agreements, users, and administrative operations. It streamlines apartment listings, agreement requests, coupon management, payments, and announcements for both admins and users.",
+    "briefDescription": "A robust platform designed to automate and centralize apartment management tasks, from tenant requests to administrative operations.",
+    "challenges": [
+      "Integrating secure online payment systems",
+      "Ensuring real-time data sync between admin and tenant dashboards",
+      "Handling multi-role authentication and permissions"
+    ],
+    "futurePlans": [
+      "Add mobile app for both tenants and admins",
+      "Implement AI-based maintenance request predictions",
+      "Integrate IoT devices for real-time utility monitoring"
+    ],
+    "image": "https://i.ibb.co.com/29XKyxj/aptora.png",
+    "tech": ["React", "Node.js", "Express", "MongoDB"],
+    "bullets": [
+      "Streamlined apartment listings and agreement request workflows",
+      "Integrated coupon management, payment processing, and announcements"
+    ],
+    "github": "https://github.com/fuadhasan05/aptora",
+    "live": "https://aptora-25.web.app/"
+  },
+  {
+    "id": 2,
+    "title": "ShareBite",
+    "description": "ShareBite is a community-driven food sharing platform built with React, Vite, Express, and MongoDB. It enables users to share surplus food, request meals, and help reduce food waste.",
+    "briefDescription": "A food-sharing network to reduce waste by connecting people who have surplus food with those in need.",
+    "challenges": [
+      "Implementing real-time notifications for food availability",
+      "Creating a scalable image upload and hosting solution",
+      "Building location-based search for nearby food offers"
+    ],
+    "futurePlans": [
+      "Add AI-driven food expiry prediction",
+      "Launch mobile application with offline mode",
+      "Integrate blockchain for transparent food donation tracking"
+    ],
+    "image": "https://i.ibb.co.com/99spJ4Zw/sharebite.png",
+    "tech": ["React", "Vite", "Express", "MongoDB"],
+    "bullets": [
+      "Enabled users to share and request food through a community marketplace",
+      "Designed for reducing food waste and connecting local communities"
+    ],
+    "github": "https://github.com/fuadhasan05/share-bite",
+    "live": "https://sharebite25.web.app/"
+  },
+  {
+    "id": 3,
+    "title": "GardenGlee: A Community Gardening Platform",
+    "description": "A comprehensive platform for gardening enthusiasts to share tips, connect with local gardeners, ask plant care questions, and participate in gardening events. GardenGlee fosters a vibrant community around shared interests such as composting, hydroponics, balcony gardening, and more.",
+    "briefDescription": "A social and educational hub for gardeners to share knowledge, ask questions, and organize local events.",
+    "challenges": [
+      "Designing an intuitive UI for plant-related Q&A",
+      "Building an event management system within the platform",
+      "Ensuring scalability for high traffic during seasonal gardening peaks"
+    ],
+    "futurePlans": [
+      "Add AI-based plant disease detection via image upload",
+      "Create a plant marketplace for seeds and tools",
+      "Integrate AR features for virtual garden planning"
+    ],
+    "image": "https://i.ibb.co.com/Nh7MN5R/gardenglee.png",
+    "tech": ["React", "Node.js", "Express", "MongoDB"],
+    "bullets": [
+      "Created a social hub for gardeners to share advice and resources",
+      "Facilitated local events and Q&A for gardening best practices"
+    ],
+    "github": "https://github.com/fuadhasan05/gardenglee",
+    "live": "https://gardenglee25.web.app/"
+  }
+]
