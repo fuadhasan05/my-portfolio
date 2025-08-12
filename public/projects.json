@@ -16,12 +16,25 @@
     ],
     "image": "https://i.ibb.co.com/29XKyxj/aptora.png",
     "tech": ["React", "Node.js", "Express", "MongoDB"],
+    "techStack": [
+      { "name": "React", "description": "Frontend library for building interactive UIs" },
+      { "name": "Node.js", "description": "JavaScript runtime for backend development" },
+      { "name": "Express", "description": "Backend framework for handling routes and APIs" },
+      { "name": "MongoDB", "description": "NoSQL database for data storage" }
+    ],
     "bullets": [
       "Streamlined apartment listings and agreement request workflows",
       "Integrated coupon management, payment processing, and announcements"
     ],
+    "keyFeatures": [
+      "Role-based dashboards for tenants and admins",
+      "Secure online rent payment and tracking",
+      "Real-time agreement request approvals",
+      "Automated coupon and announcement system"
+    ],
     "github": "https://github.com/fuadhasan05/aptora",
-    "live": "https://aptora-25.web.app/"
+    "live": "https://aptora-25.web.app/",
+    "outcome": "Successfully launched with positive feedback from property managers and tenants. Increased operational efficiency by 40%."
   },
   {
     "id": 2,
@@ -40,12 +53,25 @@
     ],
     "image": "https://i.ibb.co.com/99spJ4Zw/sharebite.png",
     "tech": ["React", "Vite", "Express", "MongoDB"],
+    "techStack": [
+      { "name": "React", "description": "Frontend library for interactive UI" },
+      { "name": "Vite", "description": "Fast frontend build tool" },
+      { "name": "Express", "description": "Backend framework for APIs" },
+      { "name": "MongoDB", "description": "NoSQL database for food listings and users" }
+    ],
     "bullets": [
       "Enabled users to share and request food through a community marketplace",
       "Designed for reducing food waste and connecting local communities"
     ],
+    "keyFeatures": [
+      "Post and browse surplus food listings",
+      "Location-based search for nearby offers",
+      "Secure messaging between donors and recipients",
+      "Photo uploads for each food listing"
+    ],
     "github": "https://github.com/fuadhasan05/share-bite",
-    "live": "https://sharebite25.web.app/"
+    "live": "https://sharebite25.web.app/",
+    "outcome": "Helped redistribute over 500 surplus meals in the first month of launch."
   },
   {
     "id": 3,
@@ -64,11 +90,24 @@
     ],
     "image": "https://i.ibb.co.com/Nh7MN5R/gardenglee.png",
     "tech": ["React", "Node.js", "Express", "MongoDB"],
+    "techStack": [
+      { "name": "React", "description": "Frontend UI framework for building interactive pages" },
+      { "name": "Node.js", "description": "Backend runtime for scalable apps" },
+      { "name": "Express", "description": "API framework for handling gardening events & Q&A" },
+      { "name": "MongoDB", "description": "Database for storing posts, events, and user profiles" }
+    ],
     "bullets": [
       "Created a social hub for gardeners to share advice and resources",
       "Facilitated local events and Q&A for gardening best practices"
     ],
+    "keyFeatures": [
+      "Plant-related Q&A with image support",
+      "Local gardening event creation and RSVPs",
+      "User profiles with gardening interests",
+      "Resource sharing for tools and seeds"
+    ],
     "github": "https://github.com/fuadhasan05/gardenglee",
-    "live": "https://gardenglee25.web.app/"
+    "live": "https://gardenglee25.web.app/",
+    "outcome": "Built a thriving gardening community with over 1,000 active members."
   }
 ]

@@ -55,7 +55,7 @@ export default function Navbar() {
               ))}
               <button
                 onClick={() => setShowContact(true)}
-                className="bg-gradient-to-r from-pink-500 to-purple-500 px-3 py-1 rounded-full text-white font-medium shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                className="bg-gradient-to-r from-pink-500 to-purple-500 px-3 py-1 rounded-full text-white hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
                 Request a <VscCallOutgoing />
               </button>
@@ -66,7 +66,7 @@ export default function Navbar() {
             <a
               href="/resume.pdf"
               download="Fuad_Hasan_Resume.pdf"
-              className="bg-slate-800 px-3 py-2 rounded-lg text-white font-medium shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+              className=" bg-gray-900 border border-gray-700 rounded-lg hover:bg-gray-800 px-5 py-2 text-white font-medium shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 cursor-pointer"
             >
               Resume <FaCloudDownloadAlt />
             </a>
