@@ -2,8 +2,8 @@ import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaPaperPlane } from "react-icon
 
 export default function Contact() {
   return (
-    <section className="text-gray-200 py-20 px-4 md:px-8 lg:px-20">
-      <div className="container mx-auto grid md:grid-cols-2 gap-12">
+    <section className="text-gray-200 py-20 px-4 md:px-8 lg:px-20 container mx-auto">
+      <div className="grid md:grid-cols-2 gap-12">
         
         {/* Left Section - Contact Info */}
         <div>

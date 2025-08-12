@@ -55,8 +55,8 @@ export default function ProjectDetails() {
           </Link>
         </div>
 
-        {/* Title */}
-        <div className="flex justify-between items-center mb-6">
+        {/* Title & Buttons */}
+        <div className="flex flex-col md:flex-row gap-5 justify-between mb-6 ">
           <h1 className="text-4xl font-bold text-white leading-tight">
             {project.title}
           </h1>
@@ -92,8 +92,6 @@ export default function ProjectDetails() {
             </span>
           ))}
         </div>
-
-        {/* Buttons */}
 
         {/* Main Image */}
         <div className="mt-12 rounded-xl border border-gray-800 shadow-lg overflow-hidden">
