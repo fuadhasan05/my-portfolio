@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import { Outlet, useNavigation } from "react-router";
-import Footer from "../components/Footer";
 import Loading from "../components/Loading";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Layouts = () => {
   const navigation = useNavigation();
@@ -10,8 +10,12 @@ const Layouts = () => {
 
   return (
     <div>
-      {isLoading && <Loading />}
-      <Outlet></Outlet>
+      <Navbar></Navbar>
+      <div>
+        {isLoading && <Loading />}
+        <Outlet></Outlet>
+      </div>
+      <Footer></Footer>
     </div>
   );
 };

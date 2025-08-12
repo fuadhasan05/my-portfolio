@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import { FaCloudDownloadAlt, FaTelegramPlane } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
 import { VscCallOutgoing } from "react-icons/vsc";
@@ -6,32 +7,34 @@ import { VscCallOutgoing } from "react-icons/vsc";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showContact, setShowContact] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
     { label: "Home", target: "home" },
     { label: "About", target: "about" },
     { label: "Projects", target: "projects" },
-    // { label: "Blog", target: "blog" },
   ];
 
-  // Scroll handler
   const handleScroll = (target) => {
-    if (target === "home") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    if (window.location.pathname !== "/") {
+      // Navigate to home and add scroll target as query param
+      navigate(`/?scroll=${target}`);
     } else {
-      const section = document.getElementById(target);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
+      if (target === "home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        const section = document.getElementById(target);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
       }
     }
   };
 
   return (
     <>
-      {/* Navbar */}
       <nav className="bg-[#0f0f1a] text-white py-3 md:px-16 shadow-md fixed top-0 left-0 right-0 z-50">
         <div className="flex items-center justify-between container mx-auto">
-          {/* Left: Logo */}
           <div
             className="text-4xl flex-1 font-signature cursor-pointer select-none inline-block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500"
             onClick={() => handleScroll("home")}
@@ -39,7 +42,6 @@ export default function Navbar() {
             Fuad Hasan
           </div>
 
-          {/* Center: Menu */}
           <div className="p-[2px] rounded-full animated-gradient-border">
             <ul className="hidden md:flex items-center space-x-6 flex-1 justify-center bg-slate-800 rounded-full shadow-2xl py-2 px-10">
               {navItems.map((item, index) => (
@@ -60,7 +62,6 @@ export default function Navbar() {
             </ul>
           </div>
 
-          {/* Right: Button */}
           <div className="hidden md:flex flex-1 justify-end">
             <a
               href="/resume.pdf"
@@ -70,7 +71,7 @@ export default function Navbar() {
               Resume <FaCloudDownloadAlt />
             </a>
           </div>
-          {/* Mobile Menu Icon */}
+
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
               <FiMenu size={24} />
@@ -78,7 +79,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Dropdown */}
         {isOpen && (
           <div className="md:hidden mt-4 bg-[#0F172A] p-4 rounded-lg space-y-3">
             {navItems.map((item, index) => (
@@ -106,7 +106,6 @@ export default function Navbar() {
         )}
       </nav>
 
-      {/* Contact Form Popup */}
       {showContact && (
         <div className="fixed inset-0 bg-[#0f0f1a] bg-opacity-60 flex justify-center items-center z-50">
           <div className="bg-white rounded-lg p-6 w-[90%] max-w-lg relative">
@@ -117,7 +116,7 @@ export default function Navbar() {
               ✕
             </button>
             <h2 className="text-xl font-bold mb-4 text-center">
-              Send Me a Massege
+              Send Me a Message
             </h2>
             <form className="flex-1 max-w-lg p-6 rounded-lg border bg-gray-900 border-gray-400/40 shadow-lg flex flex-col gap-4">
               <input
@@ -133,7 +132,7 @@ export default function Navbar() {
                 required
               />
               <select
-                className="rounded-md py-3 px-4  bg-gray-500 text-gray-50 placeholder-gray-100 focus:outline-none"
+                className="rounded-md py-3 px-4 bg-gray-500 text-gray-50 focus:outline-none"
                 defaultValue="Project inquiries"
                 required
               >
@@ -145,7 +144,7 @@ export default function Navbar() {
               <textarea
                 placeholder="Message"
                 rows={5}
-                className="rounded-md py-3 px-4 bg-gray-500 text-gray-50 placeholder-gray-100 focus:outline-none resize-none"
+                className="rounded-md py-3 px-4 bg-gray-500 text-gray-50 focus:outline-none resize-none"
                 required
               />
               <button
