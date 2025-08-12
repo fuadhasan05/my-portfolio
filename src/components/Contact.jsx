@@ -1,10 +1,40 @@
+import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const sendMail = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/send-email`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        toast.success("✅ Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        const data = await res.json();
+        toast.error(`❌ ${data.error || "Failed to send message."}`);
+      }
+    } catch (error) {
+      toast.error("❌ Failed to send message. Try again.");
+    }
+  };
+
   return (
-    <section className="text-gray-200 py-20 px-4 md:px-8 lg:px-20 container mx-auto">
+    <section className="text-gray-200 py-20 container mx-auto">
+      <Toaster position="top-center" />
+
       <div className="grid md:grid-cols-2 gap-12">
-        
         {/* Left Section - Contact Info */}
         <div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-600">
@@ -52,31 +82,43 @@ export default function Contact() {
 
         {/* Right Section - Form */}
         <div className="bg-gray-900 border border-gray-400/40 rounded-2xl p-8 shadow-lg">
-          <form className="space-y-6">
+          <form onSubmit={sendMail} className="space-y-6">
             <div>
               <label className="block mb-2 text-gray-300 font-medium">Name</label>
               <input
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 type="text"
-                className="w-full p-3 rounded-lg bg-white text-gray-900 border border-gray-700  outline-none"
+                className="w-full p-3 rounded-lg bg-white text-gray-900 border border-gray-700 outline-none"
                 placeholder="Your name"
+                required
               />
             </div>
 
             <div>
               <label className="block mb-2 text-gray-300 font-medium">Email</label>
               <input
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 type="email"
-                className="w-full p-3 rounded-lg bg-white text-gray-900 border border-gray-700  outline-none"
+                className="w-full p-3 rounded-lg bg-white text-gray-900 border border-gray-700 outline-none"
                 placeholder="Your email"
+                required
               />
             </div>
 
             <div>
               <label className="block mb-2 text-gray-300 font-medium">Message</label>
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 rows="4"
-                className="w-full p-3 rounded-lg bg-white text-gray-900 border border-gray-700  outline-none"
+                className="w-full p-3 rounded-lg bg-white text-gray-900 border border-gray-700 outline-none"
                 placeholder="Your message"
+                required
               ></textarea>
             </div>
 
