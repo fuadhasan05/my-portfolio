@@ -82,13 +82,12 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 p-3 rounded-lg border border-pink-500 text-pink-500 font-semibold hover:bg-pink-500 hover:text-white transition"
+              className="w-full flex items-center justify-center gap-2 p-3 rounded-lg bg-gray-900 border border-gray-700 text-pink-500 font-semibold hover:text-white hover:bg-gradient-to-r from-pink-500 to-purple-500 transition cursor-pointer"
             >
               <FaPaperPlane /> Send Message
             </button>
           </form>
         </div>
-
       </div>
     </section>
   );
