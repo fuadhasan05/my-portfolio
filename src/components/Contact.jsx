@@ -1,128 +1,95 @@
-import {
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaGithub,
-  FaLinkedin,
-  FaTelegramPlane,
-  FaTwitter,
-  FaWhatsapp,
-  FaDiscord,
-} from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section className="container mx-auto flex flex-col md:flex-row gap-10 py-16 text-gray-100 min-h-[400px]">
-      {/* Left side: Contact info */}
-      <div className="flex-1 space-y-6">
-        <h2 className="text-4xl font-bold text-pink-500">
-          Contact <span className="italic">Me</span>
-        </h2>
-        <p className="text-lg max-w-md">
-          Open to any adventure that involves learning and making cool stuff!
-        </p>
+    <section className="text-gray-200 py-20 px-4 md:px-8 lg:px-20">
+      <div className="container mx-auto grid md:grid-cols-2 gap-12">
+        
+        {/* Left Section - Contact Info */}
+        <div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-600">
+            Get in Touch
+          </h2>
+          <p className="text-gray-400 mb-10 leading-relaxed">
+            Feel free to reach out to me through any of the channels below or send me a direct message using the form.
+          </p>
 
-        {/* Contact details */}
-        <div className="space-y-4">
-          <div className="flex items-center gap-3 text-white font-semibold text-lg">
-            <FaEnvelope className="text-xl" />
-            <a
-              href="mailto:fuadhasan.web@gmail.com"
-              className="hover:underline"
-            >
-              fuadhasan.web@gmail.com
-            </a>
-          </div>
-          <div className="flex items-center gap-3 text-white font-semibold text-lg">
-            <FaLinkedin className="text-xl" />
-            <a
-              href="https://www.linkedin.com/in/fuad05/"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:underline"
-            >
-              @fuad05
-            </a>
-          </div>
-          <div className="flex items-center gap-3 text-gray-300 text-lg">
-            <FaMapMarkerAlt className="text-xl" />
-            <span>Rajshahi, Bangladesh</span>
+          <div className="space-y-6">
+            {/* Email */}
+            <div className="flex items-center space-x-4">
+              <div className="w-14 h-14 rounded-xl border border-pink-500 flex items-center justify-center text-pink-500">
+                <FaEnvelope size={22} />
+              </div>
+              <div>
+                <p className="font-semibold text-white">Email</p>
+                <p className="text-gray-400">fuadhasan.web@gmail.com</p>
+              </div>
+            </div>
+
+            {/* Phone */}
+            <div className="flex items-center space-x-4">
+              <div className="w-14 h-14 rounded-xl border border-purple-500 flex items-center justify-center text-purple-500">
+                <FaPhoneAlt size={22} />
+              </div>
+              <div>
+                <p className="font-semibold text-white">Phone</p>
+                <p className="text-gray-400">+088 016616662095</p>
+              </div>
+            </div>
+
+            {/* Location */}
+            <div className="flex items-center space-x-4">
+              <div className="w-14 h-14 rounded-xl border border-green-500 flex items-center justify-center text-green-500">
+                <FaMapMarkerAlt size={22} />
+              </div>
+              <div>
+                <p className="font-semibold text-white">Location</p>
+                <p className="text-gray-400">Rajshahi, Bangladesh</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Social icons */}
-        <div className="flex space-x-6 mt-6">
-          <a
-            href="https://github.com/fuadhasan05"
-            target="_blank"
-            rel="noreferrer"
-            className="p-3 bg-pink-600 rounded-full hover:bg-pink-700 transition"
-          >
-            <FaGithub className="text-white" />
-          </a>
-          <a
-            href="https://linkedin.com/in/fuad05"
-            target="_blank"
-            rel="noreferrer"
-            className="p-3 bg-pink-600 rounded-full hover:bg-pink-700 transition"
-          >
-            <FaLinkedin className="text-white" />
-          </a>
-          <a
-            href="https://wa.me/08801616662095"
-            target="_blank"
-            rel="noreferrer"
-            className="p-3 bg-pink-600 rounded-full hover:bg-pink-700 transition"
-          >
-            <FaWhatsapp className="text-white" />
-          </a>
-          <a
-            href="https://discord.com/users/.fuad_hasan"
-            target="_blank"
-            rel="noreferrer"
-            className="p-3 bg-pink-600 rounded-full hover:bg-pink-700 transition"
-          >
-            <FaDiscord className="text-white" />
-          </a>
+        {/* Right Section - Form */}
+        <div className="bg-gray-900 border border-gray-400/40 rounded-2xl p-8 shadow-lg">
+          <form className="space-y-6">
+            <div>
+              <label className="block mb-2 text-gray-300 font-medium">Name</label>
+              <input
+                type="text"
+                className="w-full p-3 rounded-lg bg-white text-gray-900 border border-gray-700  outline-none"
+                placeholder="Your name"
+              />
+            </div>
+
+            <div>
+              <label className="block mb-2 text-gray-300 font-medium">Email</label>
+              <input
+                type="email"
+                className="w-full p-3 rounded-lg bg-white text-gray-900 border border-gray-700  outline-none"
+                placeholder="Your email"
+              />
+            </div>
+
+            <div>
+              <label className="block mb-2 text-gray-300 font-medium">Message</label>
+              <textarea
+                rows="4"
+                className="w-full p-3 rounded-lg bg-white text-gray-900 border border-gray-700  outline-none"
+                placeholder="Your message"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full flex items-center justify-center gap-2 p-3 rounded-lg border border-pink-500 text-pink-500 font-semibold hover:bg-pink-500 hover:text-white transition"
+            >
+              <FaPaperPlane /> Send Message
+            </button>
+          </form>
         </div>
+
       </div>
-
-      {/* Right side: Contact form */}
-      <form className="flex-1 max-w-lg p-6 rounded-lg border bg-gray-900 border-gray-400/40 shadow-lg flex flex-col gap-4">
-        <input
-          type="text"
-          placeholder="Name"
-          className="rounded-md py-3 px-4 bg-gray-500 text-gray-50 placeholder-gray-100 focus:outline-none"
-          required
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          className="rounded-md py-3 px-4 bg-gray-500 text-gray-50 placeholder-gray-100 focus:outline-none"
-          required
-        />
-        <select
-          className="rounded-md py-3 px-4  bg-gray-500 text-gray-50 placeholder-gray-100 focus:outline-none"
-          defaultValue="Project inquiries"
-          required
-        >
-          <option disabled>Project inquiries</option>
-          <option>Project inquiries</option>
-          <option>Collaboration</option>
-          <option>Others</option>
-        </select>
-        <textarea
-          placeholder="Message"
-          rows={5}
-          className="rounded-md py-3 px-4 bg-gray-500 text-gray-50 placeholder-gray-100 focus:outline-none resize-none"
-          required
-        />
-        <button
-          type="submit"
-          className="mt-4 bg-slate-800 hover:bg-slate-400 transition rounded-md py-3 font-semibold text-white flex justify-center items-center gap-2 cursor-pointer"
-        >
-          <FaTelegramPlane /> Send
-        </button>
-      </form>
     </section>
   );
 }

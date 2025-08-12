@@ -26,7 +26,7 @@ export default function FeaturedProjects() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col"
+            className="bg-gray-900 border border-gray-400/40 rounded-lg overflow-hidden shadow-lg flex flex-col"
           >
             <img
               src={project.image}

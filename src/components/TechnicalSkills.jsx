@@ -81,11 +81,11 @@ export default function TechnicalSkills() {
       </div>
 
       {/* Skills Grid */}
-      <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto bg-gray-900 rounded-lg p-5">
         {skillsData[activeCategory].map((skill, idx) => (
           <div
             key={idx}
-            className="flex items-center gap-2 bg-gray-900 px-4 py-2 rounded-lg shadow hover:shadow-lg transition"
+            className="flex items-center gap-2 bg-black px-4 py-2 rounded-lg shadow hover:shadow-lg transition"
           >
             <span className="text-xl">{skill.icon}</span>
             <span className="text-sm font-medium">{skill.name}</span>
